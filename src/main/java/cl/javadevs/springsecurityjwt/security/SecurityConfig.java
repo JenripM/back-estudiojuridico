@@ -62,6 +62,8 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
+                .cors() // Asegúrate de que CORS esté habilitado aquí
+                .and()
                 .exceptionHandling() // Permitimos el manejo de excepciones
                 .authenticationEntryPoint(jwtAuthenticationEntryPoint) // Nos establece un punto de entrada
                                                                        // personalizado de autenticación para el manejo
