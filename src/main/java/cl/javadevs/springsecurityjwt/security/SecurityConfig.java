@@ -61,29 +61,28 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .cors() // Asegúrate de que CORS esté habilitado aquí
-                .and()
-                .exceptionHandling() // Permitimos el manejo de excepciones
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint) // Nos establece un punto de entrada
-                                                                       // personalizado de autenticación para el manejo
-                                                                       // de autenticaciones no autorizadas
-                .and()
-                .sessionManagement() // Permite la gestión de sessiones
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeHttpRequests() // Toda petición http debe ser autorizada
-                .requestMatchers("/api/v1/auth/**", "/api/v1/cargo/**", "/api/v1/trabajador/**", "/api/v1/cliente/**",
-                        "/api/v1/caso/**", "/api/v1/actividad/**")
-                .permitAll()
-                // Agregar más URLs para gestionar sus permisos
-                .anyRequest().authenticated()
-                .and()
-                .httpBasic();
+            .csrf().disable()
+            .cors() // Asegúrate de que CORS esté habilitado aquí
+            .and()
+            .exceptionHandling()
+            .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+            .and()
+            .sessionManagement()
+            .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and()
+            .authorizeHttpRequests()
+            .requestMatchers("/api/v1/auth/**", "/api/v1/cargo/**", "/api/v1/trabajador/**", "/api/v1/cliente/**",
+                    "/api/v1/caso/**", "/api/v1/actividad/**")
+            .permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .httpBasic();
+    
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+    
         return http.build();
     }
-
+    
      @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
