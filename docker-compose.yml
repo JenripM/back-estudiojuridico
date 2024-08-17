@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app_back:
+    build: Spring-Security-JWT
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.datasource.url=jdbc:mysql://MYSQL8001.site4now.net:3306/db_aac251_estudio
+      - spring.datasource.username=aac251_estudio
+      - spring.datasource.password=asidesimple1212
+      - spring.jpa.hibernate.ddl-auto=update
+      - spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+      - spring.jpa.generate-ddl=true
+      - spring.jpa.show-sql=true
+    restart: always
