@@ -33,7 +33,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/auth/")
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin
 public class RestControllerAuth {
     private AuthenticationManager authenticationManager;
     private PasswordEncoder passwordEncoder;
