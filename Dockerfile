@@ -9,4 +9,4 @@ COPY  target/Spring-Security-JWT-0.0.1-SNAPSHOT.jar app_back.jar
 
 
 # Configurar el punto de entrada para ejecutar la aplicación
-ENTRYPOINT ["java", "-jar", "/app/app_back.jar"]
+ENTRYPOINT ["java", "-jar", "app_back.jar"]
