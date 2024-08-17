@@ -2,6 +2,7 @@ cl\javadevs\springsecurityjwt\controllers\RestControllerAuth.class
 cl\javadevs\springsecurityjwt\repositories\CasoRepository.class
 cl\javadevs\springsecurityjwt\controllers\ClienteController.class
 cl\javadevs\springsecurityjwt\services\CargoService.class
+cl\javadevs\springsecurityjwt\security\SecurityConfig$1.class
 cl\javadevs\springsecurityjwt\SpringSecurityJwtApplication.class
 cl\javadevs\springsecurityjwt\dtos\DtoAuthRespuesta.class
 cl\javadevs\springsecurityjwt\dtos\DtoLogin.class
@@ -31,6 +32,7 @@ cl\javadevs\springsecurityjwt\models\Trabajador.class
 cl\javadevs\springsecurityjwt\services\TrabajadorService.class
 cl\javadevs\springsecurityjwt\security\JwtAuthenticationEntryPoint.class
 cl\javadevs\springsecurityjwt\models\Cargo.class
+cl\javadevs\springsecurityjwt\config\WebConfig.class
 cl\javadevs\springsecurityjwt\models\Roles.class
 cl\javadevs\springsecurityjwt\dtos\DtoRegistro.class
 cl\javadevs\springsecurityjwt\dtos\TrabajadorDTO.class
