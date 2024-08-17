@@ -33,7 +33,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/auth/")
-@CrossOrigin(origins = {"https://front-estudiojuridico.vercel.app"})
+@CrossOrigin(origins = {"https://front-estudiojuridico.vercel.app/authentication/login"})
 public class RestControllerAuth {
     private AuthenticationManager authenticationManager;
     private PasswordEncoder passwordEncoder;
