@@ -13,7 +13,8 @@ import java.util.Optional;
 @Service
 public class ClienteService {
     
-    @Autowired ClienteRepository clienteRepository;
+    @Autowired
+    private ClienteRepository clienteRepository;
 
         public Cliente addCliente(Cliente cliente) {
         return clienteRepository.save(cliente);
@@ -35,15 +36,11 @@ public class ClienteService {
         cliente.setDireccion(clienteDetails.getDireccion());
         cliente.setTelefono(clienteDetails.getTelefono());
         cliente.setCorreoElectronico(clienteDetails.getCorreoElectronico());
+        cliente.setDeserto(clienteDetails.getDeserto());
         return clienteRepository.save(cliente);
     }
 
     public void deleteCliente(int id) {
         clienteRepository.deleteById(id);
     }
-
-
-    
-    
 }
-

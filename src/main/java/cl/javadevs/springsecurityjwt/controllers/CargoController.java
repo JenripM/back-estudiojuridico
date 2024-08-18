@@ -11,7 +11,7 @@ import cl.javadevs.springsecurityjwt.services.CargoService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"https://front-estudiojuridico.vercel.app"})
+@CrossOrigin
 @RequestMapping("/api/v1/cargo")
 public class CargoController {
 
